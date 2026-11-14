@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder | CampusCareer BD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar no-print">
+    <a href="index.html" class="logo">
+        CampusCareer<span>BD</span>
+    </a>
+    <div class="nav-links">
+        <a href="student-dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="jobs.html">Find Jobs</a>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</nav>
+
+<section class="cv-page">
+    <div class="cv-toolbar no-print">
+        <div>
+            <h1>My CV</h1>
+            <p>Auto-generated from your profile. Update your profile to change it, then print or save as PDF.</p>
+        </div>
+        <button class="primary-btn" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    </div>
+
+    <div class="cv-sheet" id="cvSheet">
+        <p>Loading your CV...</p>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

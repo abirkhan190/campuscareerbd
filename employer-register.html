@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Register | CampusCareer BD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-body">
+<div class="auth-container">
+    <div class="auth-box">
+        <a href="index.html" class="logo">
+            CampusCareer<span>BD</span>
+        </a>
+        <h2>Employer Sign Up</h2>
+        <p>Post jobs and find talented students.</p>
+        <form id="employerRegisterForm">
+            <label>Company Name</label>
+            <input type="text" id="companyName" placeholder="Enter company name" required>
+            <label>Company Email</label>
+            <input type="email" id="companyEmail" placeholder="Enter company email" required>
+            <label>Industry</label>
+            <input type="text" id="industry" placeholder="e.g. Software, Retail, Marketing" required>
+            <label>Password</label>
+            <input type="password" id="companyPassword" placeholder="Create password" required>
+            <button type="submit" class="full-btn">Create Employer Account</button>
+        </form>
+        <p id="employerRegisterError" class="error-text"></p>
+        <p class="auth-bottom">
+            Already have an employer account? <a href="employer-login.html">Login</a>
+        </p>
+        <p class="auth-bottom small-link">
+            Looking for a job? <a href="register.html">Student Register</a>
+        </p>
+    </div>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>

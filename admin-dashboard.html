@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | CampusCareer BD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        CampusCareer<span>BD</span>
+    </a>
+    <div class="nav-links">
+        <a href="admin-dashboard.html">Admin Panel</a>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</nav>
+
+<div class="dashboard">
+
+    <div class="dashboard-header">
+        <div>
+            <h1>Admin Panel</h1>
+            <p>Platform-wide overview, verification & moderation.</p>
+        </div>
+    </div>
+
+    <div class="stats-container">
+        <div class="stat-card">
+            <h3 id="totalStudents">0</h3>
+            <p>Students</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="totalEmployers">0</h3>
+            <p>Employers</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="totalJobs">0</h3>
+            <p>Jobs Posted</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="pendingJobsCount">0</h3>
+            <p>Pending Approval</p>
+        </div>
+        <div class="stat-card">
+            <h3 id="totalApps">0</h3>
+            <p>Applications</p>
+        </div>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Platform Analytics</h2>
+        <div class="chart-grid">
+            <div class="chart-card"><h3>Applications per job</h3><div id="chartAppsPerJob"></div></div>
+            <div class="chart-card"><h3>Application pipeline</h3><div id="chartPipeline"></div></div>
+            <div class="chart-card"><h3>Skills employers want</h3><div id="chartSkills"></div></div>
+            <div class="chart-card"><h3>Skills students have</h3><div id="chartStudentSkills"></div></div>
+        </div>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Pending Job Approvals</h2>
+        <div id="pendingJobList" class="admin-table"></div>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>All Jobs</h2>
+        <div id="adminJobList" class="admin-table"></div>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Registered Students</h2>
+        <div id="adminStudentList" class="admin-table"></div>
+    </div>
+
+    <div class="dashboard-section">
+        <h2>Registered Employers</h2>
+        <div id="adminEmployerList" class="admin-table"></div>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

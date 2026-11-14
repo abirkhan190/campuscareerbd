@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | CampusCareer BD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        CampusCareer<span>BD</span>
+    </a>
+    <div class="nav-links">
+        <a href="student-dashboard.html">Dashboard</a>
+        <a href="jobs.html">Find Jobs</a>
+        <a href="cv-builder.html">My CV</a>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</nav>
+<section class="profile-page">
+<div class="profile-card">
+<h1>My Profile <span id="verifiedBadge"></span></h1>
+<p class="page-subtitle">Keep your skills, schedule and background up to date — this drives your Smart Match Score, Skill Gap tips and CV.</p>
+<div id="profileBar" class="completeness-card"></div>
+<form id="profileForm">
+
+    <h3 class="form-section-title">Basic Info</h3>
+    <label>Full Name</label>
+    <input type="text" id="profileName">
+    <label>University</label>
+    <input type="text" id="profileUniversity">
+    <label>Department</label>
+    <input type="text" id="department" placeholder="Computer Science">
+    <label>CGPA</label>
+    <input type="text" id="cgpa" placeholder="e.g. 3.65">
+
+    <h3 class="form-section-title">Skills & Experience</h3>
+    <label>Skills (tap to select — these power your Smart Match Score)</label>
+    <div id="skillPicker" class="skill-picker"></div>
+    <label>Experience</label>
+    <textarea id="experience" rows="3" placeholder="e.g. 2 months freelance web design, college club tech lead"></textarea>
+    <label>Projects / Certificates</label>
+    <textarea id="projects" rows="3" placeholder="e.g. Built a portfolio website; Completed HTML/CSS course on Coursera"></textarea>
+
+    <h3 class="form-section-title">Availability</h3>
+    <label>Preferred Working Hours</label>
+    <select id="availability">
+        <option>Morning</option>
+        <option>Afternoon</option>
+        <option>Evening</option>
+        <option>Weekend</option>
+        <option>Flexible</option>
+    </select>
+
+    <label>Preferred Work Areas (tap to select)</label>
+    <div id="areaPicker" class="skill-picker"></div>
+
+    <label>Class Schedule (used for conflict checking)</label>
+    <div id="scheduleRows" class="schedule-rows"></div>
+    <button type="button" class="small-btn" id="addScheduleRowBtn">+ Add Class Time</button>
+
+    <button type="submit" class="full-btn">Save Profile</button>
+</form>
+<p id="profileMessage" class="success-text"></p>
+</div>
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>

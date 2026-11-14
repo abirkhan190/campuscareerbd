@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Jobs | CampusCareer BD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        CampusCareer<span>BD</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="jobs.html">Find Jobs</a>
+        <a href="student-dashboard.html">Dashboard</a>
+    </div>
+</nav>
+<section class="jobs-page">
+<div class="section-title">
+    <h1>Find Your Opportunity</h1>
+    <p>Search internships and part-time jobs.</p>
+</div>
+<div class="search-box">
+    <input type="text" id="jobSearch" placeholder="Search job title..." onkeyup="searchJobs()">
+</div>
+<div class="filter-row">
+    <label for="hoursFilter">Working Hours:</label>
+    <select id="hoursFilter" onchange="searchJobs()">
+        <option value="">All</option>
+        <option value="Morning">Morning</option>
+        <option value="Afternoon">Afternoon</option>
+        <option value="Evening">Evening</option>
+        <option value="Weekend">Weekend</option>
+        <option value="Flexible">Flexible</option>
+    </select>
+    <label for="locationFilter">Location:</label>
+    <select id="locationFilter" onchange="searchJobs()"></select>
+</div>
+<div class="jobs-grid" id="jobsGrid">
+    <p>Loading jobs...</p>
+</div>
+</section>
+<script src="js/script.js"></script>
+</body>
+</html>

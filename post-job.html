@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job | CampusCareer BD</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">
+        CampusCareer<span>BD</span>
+    </a>
+    <div class="nav-links">
+        <a href="employer-dashboard.html">Dashboard</a>
+        <a href="post-job.html">Post a Job</a>
+    </div>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</nav>
+
+<section class="profile-page">
+    <div class="profile-card">
+        <h1>Post a New Job</h1>
+        <p class="page-subtitle">Fill in the details below. Required skills power Smart Match & Skill Gap. New jobs need admin approval before students can see them.</p>
+
+        <form id="postJobForm">
+            <label>Job Title</label>
+            <input type="text" id="jobTitleInput" placeholder="e.g. Frontend Developer Intern" required>
+
+            <label>Location</label>
+            <select id="jobLocationInput"></select>
+
+            <label>Job Type</label>
+            <select id="jobTypeInput">
+                <option>Part-Time</option>
+                <option>Full-Time</option>
+                <option>Remote</option>
+                <option>Flexible</option>
+                <option>Evening</option>
+            </select>
+
+            <label>Salary / Stipend</label>
+            <input type="text" id="jobSalaryInput" placeholder="e.g. 10,000 BDT / Month" required>
+
+            <label>Required Skills (tap to select)</label>
+            <div id="jobSkillPicker" class="skill-picker"></div>
+
+            <label>Required Experience (optional)</label>
+            <input type="text" id="jobExperienceInput" placeholder="e.g. No experience needed / 3 months+">
+
+            <label>Working Days</label>
+            <div class="day-checkboxes" id="workingDaysBox">
+                <label><input type="checkbox" value="Sun" checked> Sun</label>
+                <label><input type="checkbox" value="Mon" checked> Mon</label>
+                <label><input type="checkbox" value="Tue" checked> Tue</label>
+                <label><input type="checkbox" value="Wed" checked> Wed</label>
+                <label><input type="checkbox" value="Thu" checked> Thu</label>
+                <label><input type="checkbox" value="Fri"> Fri</label>
+                <label><input type="checkbox" value="Sat"> Sat</label>
+            </div>
+
+            <label>Working Hours</label>
+            <div class="time-range-row">
+                <input type="time" id="jobHoursStart" value="09:00">
+                <span>to</span>
+                <input type="time" id="jobHoursEnd" value="17:00">
+            </div>
+
+            <label>Job Description</label>
+            <textarea id="jobDescriptionInput" rows="5" placeholder="Describe the role and responsibilities" required></textarea>
+
+            <button type="submit" class="full-btn">Submit for Approval</button>
+        </form>
+        <p id="postJobMessage" class="success-text"></p>
+    </div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
